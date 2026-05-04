@@ -1,0 +1,12 @@
+Fecha y hora: 05/05/2026 01:11:24
+Nombre: Alex
+Correo: ac9703991@gmail.com
+Teléfono: 7712755795
+Mensaje: Hola me gustaria la palyera
+----------------------------------------
+Fecha y hora: 05/05/2026 01:15:12
+Nombre: Alejandro
+Correo: ac9703991@gmail.com
+Teléfono: 7712755795
+Mensaje: Hola me gustaria la playera
+----------------------------------------

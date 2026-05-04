@@ -1,0 +1,437 @@
+/* ============================= */
+/* ESTILOS GENERALES */
+/* ============================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F3;
+    color: #0F0F0F;
+}
+
+p {
+    line-height: 1.6;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #0F0F0F;
+    margin-bottom: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.texto-centro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+/* ============================= */
+/* MENÚ */
+/* ============================= */
+
+.menu {
+    background-color: rgba(15, 15, 15, 0.96);
+    border-bottom: 1px solid #B8A46D;
+}
+
+.marca {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero-principal {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
+        url("imagenes/home/hero.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 120px 60px;
+}
+
+.hero-secundario {
+    min-height: 60vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("imagenes/home/hero.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 120px 60px 60px;
+}
+
+.hero-coleccion-mini {
+    min-height: 38vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("imagenes/home/hero.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 110px 60px 45px;
+    border-bottom: 1px solid #B8A46D;
+}
+
+.hero-texto {
+    color: white;
+    max-width: 750px;
+}
+
+.hero-texto h1 {
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    color: #B8A46D;
+    text-transform: uppercase;
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
+
+.btn-claro {
+    background-color: white;
+    color: #0F0F0F;
+    padding: 12px 25px;
+    text-transform: uppercase;
+}
+
+.btn-dorado {
+    background-color: #B8A46D;
+    color: white;
+    padding: 12px 25px;
+    text-transform: uppercase;
+}
+
+/* ============================= */
+/* SECCIÓN VALENTINO */
+/* ============================= */
+
+.experiencia-moda {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.imagen-fija {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.imagen-fija img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productos-scroll {
+    background: white;
+}
+
+.producto-scroll {
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.producto-scroll img {
+    width: 100%;
+    height: 480px;
+
+    object-fit: contain; /* 🔥 */
+    background-color: #F5F5F3;
+}
+
+/* ============================= */
+/* TARJETAS */
+/* ============================= */
+
+.tarjeta {
+    border: 1px solid #CFCFCF;
+    padding: 30px;
+    background-color: white;
+}
+
+.destacada {
+    border-left: 5px solid #B8A46D;
+}
+
+.imagen-seccion {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* ============================= */
+/* COLECCIONES */
+/* ============================= */
+
+.lista-botones-coleccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-coleccion {
+    border: 1px solid #B8A46D;
+    background: transparent;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.btn-coleccion:hover {
+    background: black;
+    color: white;
+}
+
+.galeria-coleccion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.galeria-coleccion img {
+    width: 100%;
+    height: 520px;
+
+    object-fit: contain; /* 🔥 NO SE CORTAN */
+    background-color: #F5F5F3;
+
+    border: 1px solid #CFCFCF;
+}
+
+/* ============================= */
+/* SHOP */
+/* ============================= */
+
+.producto-shop img {
+    height: 430px;
+
+    object-fit: contain; /* 🔥 */
+    background-color: #F5F5F3;
+}
+
+.producto img {
+    height: 420px;
+
+    object-fit: contain; /* 🔥 */
+    background-color: #F5F5F3;
+}
+
+/* ============================= */
+/* CARRUSEL */
+/* ============================= */
+
+.carrusel img {
+    height: 650px;
+    object-fit: contain;
+}
+
+/* ============================= */
+/* FORMULARIO */
+/* ============================= */
+
+.tarjeta-formulario {
+    background: white;
+    padding: 30px;
+    border-left: 5px solid #B8A46D;
+}
+
+/* ============================= */
+/* RESULTADO */
+/* ============================= */
+
+.resultado-contenedor {
+    min-height: 100vh;
+    padding-top: 130px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-resultado {
+    background: white;
+    padding: 35px;
+    border: 1px solid #CFCFCF;
+    border-left: 5px solid #B8A46D;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.09);
+}
+
+.tarjeta-resultado h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.tarjeta-resultado p {
+    word-wrap: break-word;
+}
+
+/* ============================= */
+/* FOOTER MODA */
+/* ============================= */
+
+.footer-moda {
+    background-color: #0F0F0F;
+    color: white;
+    padding: 50px 0;
+    margin-top: 60px;
+}
+
+.footer-moda h5 {
+    color: #B8A46D;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-moda p {
+    font-size: 14px;
+}
+
+.redes {
+    margin-top: 20px;
+}
+
+.redes img {
+    width: 40px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.redes img:hover {
+    transform: scale(1.2);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .galeria-coleccion {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-scroll img {
+        height: 400px;
+    }
+}
+/* Acordeón de colecciones */
+.accordion-colecciones {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.item-coleccion {
+    border: none;
+    border-bottom: 1px solid #CFCFCF;
+    background-color: transparent;
+}
+
+.boton-acordeon-coleccion {
+    background-color: transparent;
+    color: #0F0F0F;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    box-shadow: none;
+}
+
+.boton-acordeon-coleccion:not(.collapsed) {
+    background-color: transparent;
+    color: #B8A46D;
+    box-shadow: none;
+}
+
+.boton-acordeon-coleccion:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-body {
+    padding: 30px 0 50px;
+}
+
+/* Efecto premium en imágenes */
+.galeria-coleccion img {
+    padding: 10px;
+    filter: grayscale(8%);
+}
+
+.galeria-coleccion img:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+/* Pasarela */
+.pasarela-carrusel {
+    position: relative;
+    width: 55%;
+    max-width: 620px;
+    margin: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    padding: 15px;
+}
+
+.pasarela-carrusel img {
+    height: 680px;
+    object-fit: contain;
+    background-color: #F5F5F3;
+}
+
+.boton-carrusel {
+    width: 55px;
+    opacity: 1;
+}
+
+.icono-carrusel {
+    background-color: #0F0F0F;
+    border-radius: 50%;
+    padding: 22px;
+}
+
+.carousel-indicators button {
+    background-color: #0F0F0F !important;
+}
+
+@media (max-width: 768px) {
+    .pasarela-carrusel {
+        width: 95%;
+    }
+
+    .pasarela-carrusel img {
+        height: 500px;
+    }
+}
