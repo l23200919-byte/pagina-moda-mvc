@@ -435,3 +435,16 @@ h2 {
         height: 500px;
     }
 }
+.footer-moda .form-control {
+    background-color: #1A1A1A;
+    border: 1px solid #444;
+    color: white;
+}
+
+.footer-moda .form-control::placeholder {
+    color: #CFCFCF;
+}
+
+.footer-moda textarea {
+    resize: none;
+}
