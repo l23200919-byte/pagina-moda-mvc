@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=20">
 </head>
 
 <body>
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Elegancia, identidad y diseño contemporáneo.</p>
 
             <a href="coleccion.php" class="btn btn-claro">Ver colección</a>
-            <a href="contacto.php" class="btn btn-outline-light">Contactar</a>
+            <a href="#footer-contacto" class="btn btn-claro">Contacto</a>
         </div>
     </header>
 
@@ -72,7 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="imagenes/home/editorial1.jpg" alt="Imagen principal de moda">
             <div class="texto-imagen">
                 <h2>Diseño con presencia</h2>
-                <p>Una propuesta visual elegante y moderna.</p>
             </div>
         </div>
 
@@ -166,8 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <h5>Contacto</h5>
 
-                <form method="POST" action="index.php">
-
+                <form method="POST" action="contacto.php">
                     <input type="text" name="nombre" class="form-control mb-3"
                         placeholder="Nombre" required>
 
@@ -189,7 +187,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
 
             </div>
-
+    
             <!-- REDES -->
             <div class="col-lg-4 text-center">
 
@@ -218,10 +216,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="text-center">
             © TecNM Campus Pachuca – Programación Web 2026
         </p>
-
+        
     </div>
-
+    <div id="panel-admin-contactos">
+        <a href="admin_contactos.php">
+            Panel de contactos
+        </a>
+    </div>
 </footer>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -236,5 +239,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         alert("El mensaje debe tener mínimo 10 caracteres");
     </script>
 <?php } ?>
+<?php if (isset($_GET["enviado"]) && $_GET["enviado"] == "ok") { ?>
+<script>
+    alert("Mensaje enviado correctamente.");
+</script>
+<?php } ?>
+
+<?php if (isset($_GET["error"]) && $_GET["error"] == "campos") { ?>
+<script>
+    alert("Por favor llena todos los campos obligatorios.");
+</script>
+<?php } ?>
+
+<?php if (isset($_GET["error"]) && $_GET["error"] == "correo") { ?>
+<script>
+    alert("El correo no es válido.");
+</script>
+<?php } ?>
+
+<?php if (isset($_GET["error"]) && $_GET["error"] == "mensaje") { ?>
+<script>
+    alert("El mensaje debe tener mínimo 10 caracteres.");
+</script>
+<?php } ?>
+
 </body>
 </html>

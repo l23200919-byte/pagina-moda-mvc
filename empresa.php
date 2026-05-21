@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Empresa | Macario Jiménez</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=10">
 </head>
 
 <body>
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </nav>
 
     <!-- Encabezado -->
-    <header class="hero-secundario">
+    <header class="empresa-hero">
         <div class="hero-texto">
             <p class="subtitulo">Sobre la marca</p>
             <h1>Empresa</h1>

@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Pasarela | Macario Jiménez</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=10">
 </head>
 
 <body>
@@ -48,12 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </nav>
 
-    <header class="hero-secundario">
-        <div class="hero-texto">
-            <p class="subtitulo">Galería visual</p>
-            <h1>Pasarela</h1>
-        </div>
-    </header>
+    <header class="pasarela-hero">
+    <div class="hero-texto">
+        <p class="subtitulo">Runway</p>
+        <h1>Pasarela</h1>
+    </div>
+</header>
 
     <main class="container">
         <section>

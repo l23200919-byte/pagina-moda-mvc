@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <h5>Contacto</h5>
 
-                <form method="POST" action="index.php">
+                <form method="POST" action="contacto.php">
 
                     <input type="text" name="nombre" class="form-control mb-3"
                         placeholder="Nombre" required>

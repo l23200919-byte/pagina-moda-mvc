@@ -55,7 +55,7 @@ h2 {
 }
 
 /* ============================= */
-/* HERO */
+/* HERO PRINCIPAL */
 /* ============================= */
 
 .hero-principal {
@@ -70,29 +70,41 @@ h2 {
     padding: 120px 60px;
 }
 
-.hero-secundario {
-    min-height: 60vh;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("imagenes/home/hero.png");
-    background-size: cover;
-    background-position: center;
+/* ============================= */
+/* HEADERS NUEVOS POR PÁGINA */
+/* ============================= */
+
+.empresa-hero,
+.coleccion-hero,
+.shop-hero,
+.pasarela-hero {
+    width: 100%;
+    min-height: 34vh;
+    padding: 120px 20px 60px;
     display: flex;
     align-items: center;
-    padding: 120px 60px 60px;
+    justify-content: center;
+    text-align: center;
 }
 
-.hero-coleccion-mini {
-    min-height: 38vh;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("imagenes/home/hero.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 110px 60px 45px;
-    border-bottom: 1px solid #B8A46D;
+.empresa-hero {
+    background-color: #1B1B1B !important;
+    border-bottom: 2px solid #B8A46D;
+}
+
+.coleccion-hero {
+    background-color: #2A2622 !important;
+    border-bottom: 2px solid #D6B56C;
+}
+
+.shop-hero {
+    background-color: #111111 !important;
+    border-bottom: 2px solid #B8A46D;
+}
+
+.pasarela-hero {
+    background-color: #262626 !important;
+    border-bottom: 2px solid #C8A96B;
 }
 
 .hero-texto {
@@ -101,14 +113,19 @@ h2 {
 }
 
 .hero-texto h1 {
-    font-size: 70px;
+    font-size: 72px;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 6px;
+    margin: 0;
 }
 
 .subtitulo {
     color: #B8A46D;
     text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 /* ============================= */
@@ -127,10 +144,19 @@ h2 {
     color: white;
     padding: 12px 25px;
     text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-dorado:hover {
+    background-color: #0F0F0F;
+    color: white;
 }
 
 /* ============================= */
-/* SECCIÓN VALENTINO */
+/* SECCIÓN TIPO VALENTINO */
 /* ============================= */
 
 .experiencia-moda {
@@ -162,8 +188,7 @@ h2 {
 .producto-scroll img {
     width: 100%;
     height: 480px;
-
-    object-fit: contain; /* 🔥 */
+    object-fit: contain;
     background-color: #F5F5F3;
 }
 
@@ -213,44 +238,245 @@ h2 {
 .galeria-coleccion {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 28px;
 }
 
 .galeria-coleccion img {
     width: 100%;
     height: 520px;
-
-    object-fit: contain; /* 🔥 NO SE CORTAN */
+    object-fit: contain;
     background-color: #F5F5F3;
-
     border: 1px solid #CFCFCF;
+    padding: 10px;
+    filter: grayscale(8%);
+    transition: 0.3s;
+}
+
+.galeria-coleccion img:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================= */
+/* GALERÍAS LOOKBOOK MEJORADAS */
+/* ============================= */
+
+.titulo-galeria {
+    margin-top: 45px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.marco-look {
+    background-color: white;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.marco-look img {
+    width: 100%;
+    height: 520px;
+    object-fit: contain;
+    background-color: #F5F5F3;
+    display: block;
+}
+
+.numero-look {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Spring Summer 2026 */
+.galeria-summer .marco-look {
+    border: 1px solid #D8C7A3;
+    box-shadow: 0 5px 18px rgba(184, 164, 109, 0.20);
+}
+
+.galeria-summer .marco-look:hover {
+    transform: translateY(-6px);
+    border: 2px solid #B8A46D;
+}
+
+/* Resort 2026 */
+.galeria-resort .marco-look {
+    border: 1px solid #D9B6B6;
+    box-shadow: 0 5px 18px rgba(120, 60, 60, 0.18);
+}
+
+.galeria-resort .marco-look:hover {
+    transform: translateY(-6px);
+    border: 2px solid #B77B7B;
+}
+
+/* Fall 2025 */
+.galeria-fall .marco-look {
+    border: 1px solid #383838;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.20);
+}
+
+.galeria-fall .marco-look:hover {
+    transform: translateY(-6px);
+    border: 2px solid #0F0F0F;
+}
+
+/* Prefall 2025 */
+.galeria-prefall .marco-look {
+    border: 1px solid #6B315A;
+    box-shadow: 0 5px 18px rgba(107, 49, 90, 0.22);
+}
+
+.galeria-prefall .marco-look:hover {
+    transform: translateY(-6px);
+    border: 2px solid #6B315A;
+}
+
+/* Runway 2024 */
+.galeria-runway .marco-look {
+    border: 1px solid #1C2D3A;
+    box-shadow: 0 5px 18px rgba(28, 45, 58, 0.25);
+}
+
+.galeria-runway .marco-look:hover {
+    transform: translateY(-6px);
+    border: 2px solid #1C2D3A;
 }
 
 /* ============================= */
 /* SHOP */
 /* ============================= */
 
+.producto-shop {
+    border-radius: 0;
+    border: 1px solid #D8D8D8;
+    background-color: white;
+    transition: 0.3s;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.producto-shop:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
 .producto-shop img {
     height: 430px;
-
-    object-fit: contain; /* 🔥 */
+    width: 100%;
+    object-fit: contain;
     background-color: #F5F5F3;
+    padding: 12px;
+}
+
+.producto-shop .card-body {
+    padding: 25px;
+}
+
+.producto-shop h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.producto-shop p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.precio {
+    color: #B8A46D;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .producto img {
     height: 420px;
-
-    object-fit: contain; /* 🔥 */
+    object-fit: contain;
     background-color: #F5F5F3;
 }
 
 /* ============================= */
-/* CARRUSEL */
+/* CARRITO */
+/* ============================= */
+
+.carrito-seccion {
+    border-top: 1px solid #B8A46D;
+}
+
+.carrito-box {
+    max-width: 750px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-left: 5px solid #B8A46D;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+}
+
+.btn-pagar {
+    background-color: #0F0F0F;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-pagar:hover {
+    background-color: #B8A46D;
+    color: white;
+}
+
+/* ============================= */
+/* CARRUSEL PASARELA */
 /* ============================= */
 
 .carrusel img {
     height: 650px;
     object-fit: contain;
+}
+
+.pasarela-carrusel {
+    position: relative;
+    width: 55%;
+    max-width: 620px;
+    margin: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    padding: 15px;
+}
+
+.pasarela-carrusel img {
+    height: 680px;
+    object-fit: contain;
+    background-color: #F5F5F3;
+}
+
+.boton-carrusel {
+    width: 55px;
+    opacity: 1;
+}
+
+.icono-carrusel {
+    background-color: #0F0F0F;
+    border-radius: 50%;
+    padding: 22px;
+}
+
+.carousel-indicators button {
+    background-color: #0F0F0F !important;
 }
 
 /* ============================= */
@@ -261,6 +487,20 @@ h2 {
     background: white;
     padding: 30px;
     border-left: 5px solid #B8A46D;
+}
+
+.footer-moda .form-control {
+    background-color: #1A1A1A;
+    border: 1px solid #444;
+    color: white;
+}
+
+.footer-moda .form-control::placeholder {
+    color: #CFCFCF;
+}
+
+.footer-moda textarea {
+    resize: none;
 }
 
 /* ============================= */
@@ -333,10 +573,273 @@ h2 {
 }
 
 /* ============================= */
+/* MINI BOTÓN PANEL CONTACTOS */
+/* ============================= */
+
+.admin-mini-panel {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.btn-admin-mini,
+.footer-moda .btn-admin-mini,
+a.btn-admin-mini {
+    display: inline-block;
+    padding: 8px 22px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #B8A46D !important;
+    border: 1px solid #B8A46D;
+    background-color: transparent;
+    text-decoration: none !important;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.btn-admin-mini:hover,
+.footer-moda .btn-admin-mini:hover,
+a.btn-admin-mini:hover {
+    background-color: #B8A46D;
+    color: #0F0F0F !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+    opacity: 1;
+    box-shadow: 0 8px 18px rgba(184, 164, 109, 0.25);
+}
+
+/* ============================= */
+/* PANEL ADMIN CONTACTOS */
+/* ============================= */
+
+.admin-body {
+    background-color: #F5F5F3;
+    color: #0F0F0F;
+    padding-top: 90px;
+}
+
+.admin-contenedor {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 35px;
+    border-left: 5px solid #B8A46D;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.admin-titulo {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.admin-subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.admin-acciones-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-admin-volver {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0F0F0F;
+    color: white !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-admin-volver:hover {
+    background-color: #B8A46D;
+    color: #0F0F0F !important;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tabla-admin th {
+    background-color: #0F0F0F;
+    color: #B8A46D;
+    padding: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #222;
+}
+
+.tabla-admin td {
+    padding: 13px;
+    border: 1px solid #D8D8D8;
+    vertical-align: top;
+}
+
+.tabla-admin tr:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+.tabla-admin tr:hover {
+    background-color: #F1EBDD;
+}
+
+.btn-editar,
+.btn-eliminar {
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 12px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+.btn-editar {
+    background-color: #B8A46D;
+    color: #0F0F0F !important;
+}
+
+.btn-editar:hover {
+    background-color: #0F0F0F;
+    color: white !important;
+}
+
+.btn-eliminar {
+    background-color: #7A1E1E;
+    color: white !important;
+}
+
+.btn-eliminar:hover {
+    background-color: #0F0F0F;
+    color: white !important;
+}
+
+/* ============================= */
+/* FORMULARIO EDITAR CONTACTO */
+/* ============================= */
+
+.form-admin {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-admin label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.form-admin input,
+.form-admin textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CFCFCF;
+    background-color: #F5F5F3;
+    color: #0F0F0F;
+    outline: none;
+}
+
+.form-admin textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-admin input:focus,
+.form-admin textarea:focus {
+    border-color: #B8A46D;
+    box-shadow: 0 0 0 2px rgba(184, 164, 109, 0.15);
+}
+
+.btn-actualizar {
+    margin-top: 25px;
+    background-color: #B8A46D;
+    color: #0F0F0F;
+    border: none;
+    padding: 12px 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-actualizar:hover {
+    background-color: #0F0F0F;
+    color: white;
+}
+
+/* ============================= */
 /* RESPONSIVE */
 /* ============================= */
 
+@media (max-width: 992px) {
+    .galeria-coleccion {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .marco-look img {
+        height: 460px;
+    }
+
+    .tabla-admin {
+        font-size: 12px;
+    }
+
+    .admin-contenedor {
+        padding: 20px;
+        overflow-x: auto;
+    }
+}
+
 @media (max-width: 768px) {
+
+    .empresa-hero,
+    .coleccion-hero,
+    .shop-hero,
+    .pasarela-hero {
+        min-height: 26vh;
+        padding: 100px 20px 40px;
+    }
+
+    .hero-texto h1 {
+        font-size: 42px;
+    }
+
+    .experiencia-moda {
+        display: block;
+    }
+
+    .imagen-fija {
+        position: relative;
+        height: auto;
+    }
+
+    .imagen-fija img {
+        height: auto;
+    }
 
     .galeria-coleccion {
         grid-template-columns: 1fr;
@@ -345,88 +848,11 @@ h2 {
     .producto-scroll img {
         height: 400px;
     }
-}
-/* Acordeón de colecciones */
-.accordion-colecciones {
-    max-width: 1200px;
-    margin: auto;
-}
 
-.item-coleccion {
-    border: none;
-    border-bottom: 1px solid #CFCFCF;
-    background-color: transparent;
-}
+    .producto-shop img {
+        height: 320px;
+    }
 
-.boton-acordeon-coleccion {
-    background-color: transparent;
-    color: #0F0F0F;
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 20px 0;
-    box-shadow: none;
-}
-
-.boton-acordeon-coleccion:not(.collapsed) {
-    background-color: transparent;
-    color: #B8A46D;
-    box-shadow: none;
-}
-
-.boton-acordeon-coleccion:focus {
-    box-shadow: none;
-    border-color: transparent;
-}
-
-.accordion-body {
-    padding: 30px 0 50px;
-}
-
-/* Efecto premium en imágenes */
-.galeria-coleccion img {
-    padding: 10px;
-    filter: grayscale(8%);
-}
-
-.galeria-coleccion img:hover {
-    transform: scale(1.03);
-    filter: grayscale(0%);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-}
-/* Pasarela */
-.pasarela-carrusel {
-    position: relative;
-    width: 55%;
-    max-width: 620px;
-    margin: auto;
-    background-color: #FFFFFF;
-    border: 1px solid #CFCFCF;
-    padding: 15px;
-}
-
-.pasarela-carrusel img {
-    height: 680px;
-    object-fit: contain;
-    background-color: #F5F5F3;
-}
-
-.boton-carrusel {
-    width: 55px;
-    opacity: 1;
-}
-
-.icono-carrusel {
-    background-color: #0F0F0F;
-    border-radius: 50%;
-    padding: 22px;
-}
-
-.carousel-indicators button {
-    background-color: #0F0F0F !important;
-}
-
-@media (max-width: 768px) {
     .pasarela-carrusel {
         width: 95%;
     }
@@ -435,16 +861,299 @@ h2 {
         height: 500px;
     }
 }
-.footer-moda .form-control {
-    background-color: #1A1A1A;
-    border: 1px solid #444;
-    color: white;
+
+@media (max-width: 576px) {
+    .galeria-coleccion {
+        grid-template-columns: 1fr;
+    }
+
+    .marco-look img {
+        height: 430px;
+    }
+
+    .hero-principal {
+        padding: 100px 25px;
+    }
+
+    .admin-acciones-superior {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn-admin-mini {
+        font-size: 10px;
+        padding: 7px 16px;
+    }
+}
+/* ============================= */
+/* MINI BOTÓN PANEL CONTACTOS */
+/* ============================= */
+
+.admin-mini-panel {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
-.footer-moda .form-control::placeholder {
-    color: #CFCFCF;
+.admin-mini-panel .btn-admin-mini {
+    display: inline-block !important;
+    padding: 8px 22px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.8px !important;
+    text-transform: uppercase !important;
+    color: #B8A46D !important;
+    border: 1px solid #B8A46D !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    border-radius: 30px !important;
+    transition: all 0.3s ease !important;
+    opacity: 0.9;
 }
 
-.footer-moda textarea {
-    resize: none;
+.admin-mini-panel .btn-admin-mini:hover {
+    background-color: #B8A46D !important;
+    color: #0F0F0F !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(184, 164, 109, 0.25);
+    opacity: 1;
+}
+/* ============================= */
+/* MINI BOTÓN PANEL CONTACTOS */
+/* ============================= */
+
+#panel-admin-contactos {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#panel-admin-contactos a {
+    display: inline-block !important;
+    padding: 8px 22px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.8px !important;
+    text-transform: uppercase !important;
+    color: #B8A46D !important;
+    border: 1px solid #B8A46D !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    border-radius: 30px !important;
+    transition: all 0.3s ease !important;
+    opacity: 0.9 !important;
+}
+
+#panel-admin-contactos a:hover {
+    background-color: #B8A46D !important;
+    color: #0F0F0F !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(184, 164, 109, 0.25);
+    opacity: 1 !important;
+}
+/* ============================= */
+/* PANEL ADMIN CONTACTOS */
+/* ============================= */
+
+.admin-body {
+    background-color: #F5F5F3;
+    color: #0F0F0F;
+    padding-top: 120px;
+    min-height: 100vh;
+}
+
+.admin-contenedor {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto 70px;
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-left: 5px solid #B8A46D;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.admin-titulo {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.admin-subtitulo {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.admin-acciones-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-admin-volver {
+    display: inline-block;
+    background-color: #0F0F0F;
+    color: #FFFFFF !important;
+    padding: 11px 22px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.btn-admin-volver:hover {
+    background-color: #B8A46D;
+    color: #0F0F0F !important;
+}
+
+.admin-contador {
+    color: #B8A46D;
+    border: 1px solid #B8A46D;
+    padding: 9px 18px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+}
+
+.tabla-responsive-admin {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tabla-admin th {
+    background-color: #0F0F0F;
+    color: #B8A46D;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #222;
+    white-space: nowrap;
+}
+
+.tabla-admin td {
+    padding: 14px;
+    border: 1px solid #D8D8D8;
+    vertical-align: top;
+}
+
+.tabla-admin tr:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+.tabla-admin tr:hover {
+    background-color: #F1EBDD;
+}
+
+.mensaje-admin {
+    max-width: 260px;
+    line-height: 1.5;
+}
+
+.btn-editar,
+.btn-eliminar {
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 11px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 3px 0;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-editar {
+    background-color: #B8A46D;
+    color: #0F0F0F !important;
+}
+
+.btn-editar:hover {
+    background-color: #0F0F0F;
+    color: white !important;
+}
+
+.btn-eliminar {
+    background-color: #7A1E1E;
+    color: white !important;
+}
+
+.btn-eliminar:hover {
+    background-color: #0F0F0F;
+    color: white !important;
+}
+
+.sin-registros {
+    text-align: center;
+    padding: 28px !important;
+    color: #777;
+    font-style: italic;
+}
+
+/* Responsive panel admin */
+@media (max-width: 768px) {
+    .admin-contenedor {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .admin-titulo {
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+
+    .admin-acciones-superior {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tabla-admin {
+        font-size: 12px;
+    }
+}
+/* ============================= */
+/* BOTONES FORMULARIO ADMIN */
+/* ============================= */
+
+.acciones-form-admin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.btn-cancelar {
+    display: inline-block;
+    background-color: transparent;
+    color: #0F0F0F !important;
+    border: 1px solid #0F0F0F;
+    padding: 12px 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+    background-color: #0F0F0F;
+    color: white !important;
 }

@@ -1,18 +1,17 @@
 <?php
-// Conexión a la base de datos de XAMPP.
+// Conexión a la base de datos con mysqli.
 
-$host = "localhost";
+$host = "127.0.0.1";
 $usuario = "root";
 $password = "";
-$base_datos = "formulario_mvc";
+$base_datos = "macario_mvc";
+$puerto = 3306;
 
-$conexion = new mysqli($host, $usuario, $password, $base_datos);
+$conexion = new mysqli($host, $usuario, $password, $base_datos, $puerto);
 
-// Verifica si hay error de conexión.
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 
-// Permite usar acentos y ñ.
 $conexion->set_charset("utf8");
 ?>

@@ -3,12 +3,26 @@ require_once "models/Contacto.php";
 
 class ContactoController {
 
+    public function mostrarFormulario() {
+        require_once "views/formulario.php";
+    }
+
     public function procesarFormulario() {
 
-        $nombre = trim($_POST["nombre"]);
-        $correo = trim($_POST["correo"]);
-        $telefono = trim($_POST["telefono"]);
-        $mensaje = trim($_POST["mensaje"]);
+        $nombre = isset($_POST["nombre"]) ? trim($_POST["nombre"]) : "";
+        $correo = isset($_POST["correo"]) ? trim($_POST["correo"]) : "";
+        $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]) : "";
+        $mensaje = isset($_POST["mensaje"]) ? trim($_POST["mensaje"]) : "";
+
+        if ($nombre == "" || $correo == "" || $mensaje == "") {
+            header("Location: index.php?error=campos#footer-contacto");
+            exit;
+        }
+
+        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            header("Location: index.php?error=correo#footer-contacto");
+            exit;
+        }
 
         if (strlen($mensaje) < 10) {
             header("Location: index.php?error=mensaje#footer-contacto");
