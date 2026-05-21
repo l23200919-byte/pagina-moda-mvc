@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS macario_mvc;
+USE macario_mvc;
+
+CREATE TABLE IF NOT EXISTS contactos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) NOT NULL,
+    telefono VARCHAR(30),
+    mensaje TEXT NOT NULL,
+    fecha_registro DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
